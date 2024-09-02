@@ -262,10 +262,6 @@ class __FPanel2State extends State<_FPanel2> {
   // StreamSubscription? connectTypeListener;
   // ConnectivityResult? connectivityResult;
 
-  final Battery battery = Battery();
-
-  StreamSubscription? batteryStateListener;
-  BatteryState? batteryState;
   int batteryLevel = 0;
   late Timer batteryTimer;
 
@@ -292,14 +288,6 @@ class __FPanel2State extends State<_FPanel2> {
     //     connectivityResult = result;
     //   });
     // });
-
-    batteryStateListener =
-        battery.onBatteryStateChanged.listen((BatteryState state) {
-      if (batteryState == state) return;
-      setState(() {
-        batteryState = state;
-      });
-    });
 
     getBatteryLevel();
 
@@ -389,18 +377,11 @@ class __FPanel2State extends State<_FPanel2> {
     _bufferPercunt.cancel();
     _bufferingSubs.cancel();
     // connectTypeListener?.cancel();
-    batteryStateListener?.cancel();
+
     player.removeListener(_playerValueChanged);
   }
 
-  getBatteryLevel() async {
-    final level = await battery.batteryLevel;
-    if (mounted) {
-      setState(() {
-        batteryLevel = level;
-      });
-    }
-  }
+  getBatteryLevel() async {}
 
   double dura2double(Duration d) {
     return d.inMilliseconds.toDouble();
@@ -1523,7 +1504,7 @@ class __FPanel2State extends State<_FPanel2> {
 
   // 电量显示
   Widget buildPower() {
-    if (batteryState == BatteryState.charging) {
+    if (1 == 2) {
       return Row(
         children: [
           Text(

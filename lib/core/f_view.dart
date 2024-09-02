@@ -93,7 +93,7 @@ class FView extends StatefulWidget {
     this.fit = FFit.contain,
     this.fsFit = FFit.contain,
     this.panelBuilder = defaultFPanelBuilder,
-    this.color = const Color(0xFF607D8B),
+    this.color = Colors.black,
     this.cover,
     this.fs = true,
     this.onDispose,
