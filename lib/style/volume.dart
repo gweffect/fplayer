@@ -78,7 +78,7 @@ class _FSliderToastState extends State<_FSliderToast> {
       iconData = type == 0 ? Icons.volume_up : Icons.brightness_high;
     }
 
-    final primaryColor = Theme.of(context).primaryColor;
+    final primaryColor = Color.fromARGB(255, 231, 28, 231);
     return Align(
       alignment: const Alignment(0, -0.4),
       child: Card(
