@@ -1356,7 +1356,7 @@ class __FPanel2State extends State<_FPanel2> {
             ),
           ),
           Text(
-            "缓冲中 $_bufferingPro %",
+            "loading $_bufferingPro %",
             style: const TextStyle(
               color: Colors.white70,
               fontSize: 14,
